@@ -14,6 +14,7 @@ interface SeoHeadProps {
     android?: string;
     web?: string;
   };
+  schema?: Record<string, any>[];
 }
 
 export function SeoHead({
@@ -24,6 +25,7 @@ export function SeoHead({
   type = 'website',
   path = '',
   appLinks,
+  schema = [],
 }: SeoHeadProps) {
   const url = `https://lumeth.com${path}`;
   
@@ -71,8 +73,27 @@ export function SeoHead({
         <meta property="al:web:url" content={appLinks.web} />
       )}
 
+      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="author" content="Lumeth" />
+      <meta name="theme-color" content="#000000" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      <meta name="format-detection" content="telephone=no" />
+
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
+
+      {/* Schema.org JSON-LD */}
+      {schema.map((item, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(item)}
+        </script>
+      ))}
     </Helmet>
   );
 }
