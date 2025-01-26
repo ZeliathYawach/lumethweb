@@ -19,6 +19,41 @@ export function AboutUs() {
           </p>
         </section>
 
+        {/* LUMETH Meaning Section */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-amber-400/10 to-purple-600/10 rounded-2xl p-8 border border-amber-400/20">
+            <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-amber-400 to-purple-600 text-transparent bg-clip-text">
+              The Meaning of LUMETH
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">L</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">look</span>, the way you look at life.</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">U</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">useful</span>, always to others.</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">M</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">mystery</span>, the part of you that cannot be explained.</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">E</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">expert</span>, in your chosen career.</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">T</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">tough</span>, for you are not easily broken.</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
+                <span className="text-3xl font-bold text-amber-400">H</span>
+                <p className="mt-2 text-gray-300">is for <span className="text-white font-semibold">hero</span>, as you appear to many.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Journey Section */}
         <section className="mb-16">
           <div className="bg-purple-900/30 rounded-2xl p-8 border border-purple-500/20">
