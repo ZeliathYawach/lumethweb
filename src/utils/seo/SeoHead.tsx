@@ -7,8 +7,13 @@ interface SeoHeadProps {
   description?: string;
   keywords?: string;
   image?: string;
-  type?: 'website' | 'article';
+  type?: 'website' | 'article' | 'product';
   path?: string;
+  appLinks?: {
+    ios?: string;
+    android?: string;
+    web?: string;
+  };
 }
 
 export function SeoHead({
@@ -18,6 +23,7 @@ export function SeoHead({
   image = 'https://lumeth.com/og-image.jpg',
   type = 'website',
   path = '',
+  appLinks,
 }: SeoHeadProps) {
   const url = `https://lumeth.com${path}`;
   
@@ -35,6 +41,8 @@ export function SeoHead({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Lumeth" />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -42,6 +50,26 @@ export function SeoHead({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
+      <meta name="twitter:creator" content="@Lumeth_official" />
+
+      {/* App Links */}
+      {appLinks?.ios && (
+        <>
+          <meta property="al:ios:url" content={appLinks.ios} />
+          <meta property="al:ios:app_store_id" content="6737151440" />
+          <meta property="al:ios:app_name" content="Lumeth" />
+        </>
+      )}
+      {appLinks?.android && (
+        <>
+          <meta property="al:android:url" content={appLinks.android} />
+          <meta property="al:android:package" content="com.Lumeth.Customer" />
+          <meta property="al:android:app_name" content="Lumeth" />
+        </>
+      )}
+      {appLinks?.web && (
+        <meta property="al:web:url" content={appLinks.web} />
+      )}
 
       {/* Canonical URL */}
       <link rel="canonical" href={url} />

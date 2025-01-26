@@ -8,17 +8,23 @@
     <!-- Primary Meta Tags -->
     <title>Lumeth | AI-Powered Beauty Platform for Salons, Spas & Beauty Services</title>
     <meta name="title" content="Lumeth | AI-Powered Beauty Platform for Salons, Spas & Beauty Services">
-    <meta name="description" content="Connect with top salons, spas, tattoo parlors & beauty professionals. Get personalized AI recommendations for all your beauty services. Book instantly!">
-    <meta name="keywords" content="AI beauty recommendations, beauty professionals, beauty services, salon, spa, tattoo parlour, beauty parlor, salon management, spa booking, beauty appointments">
+    <meta name="description" content="Experience AI-driven beauty recommendations, smart scheduling, and personalized beauty services. Our advanced AI technology matches you with perfect beauty professionals.">
+    <meta name="keywords" content="AI beauty platform, artificial intelligence beauty, machine learning beauty recommendations, smart beauty booking, AI-powered salon management, beauty AI technology, personalized beauty AI, smart beauty services">
     <meta name="author" content="Lumeth">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
 
+    <!-- AI-specific Meta Tags -->
+    <meta name="ai-platform" content="true">
+    <meta name="ai-features" content="personalized recommendations, smart scheduling, beauty analysis, trend prediction">
+    <meta name="ai-technology" content="machine learning, computer vision, natural language processing">
+    <meta name="ai-application" content="beauty services, salon management, customer experience">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lumeth.com/">
-    <meta property="og:title" content="Lumeth | AI-Powered Beauty Platform for Salons, Spas & Beauty Services">
-    <meta property="og:description" content="Connect with top salons, spas, tattoo parlors & beauty professionals. Get personalized AI recommendations for all your beauty services. Book instantly!">
+    <meta property="og:title" content="Lumeth | AI-Powered Beauty Platform">
+    <meta property="og:description" content="Experience AI-driven beauty recommendations and smart scheduling. Our advanced AI technology creates personalized beauty experiences.">
     <meta property="og:image" content="https://lumeth.com/og-image.jpg">
     <meta property="og:site_name" content="Lumeth">
     <meta property="og:locale" content="en_US">
@@ -27,9 +33,18 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lumeth.com/">
     <meta property="twitter:title" content="Lumeth | AI-Powered Beauty Platform">
-    <meta property="twitter:description" content="Connect with top beauty professionals. AI-powered recommendations for salons, spas, tattoo parlors & beauty services. Book instantly!">
+    <meta property="twitter:description" content="Experience AI-driven beauty recommendations and smart scheduling. Our advanced AI technology creates personalized beauty experiences.">
     <meta property="twitter:image" content="https://lumeth.com/twitter-image.jpg">
     <meta name="twitter:creator" content="@Lumeth_official">
+
+    <!-- App Links -->
+    <meta property="al:ios:url" content="lumeth://home">
+    <meta property="al:ios:app_store_id" content="6737151440">
+    <meta property="al:ios:app_name" content="Lumeth">
+    <meta property="al:android:url" content="lumeth://home">
+    <meta property="al:android:package" content="com.Lumeth.Customer">
+    <meta property="al:android:app_name" content="Lumeth">
+    <meta property="al:web:url" content="https://lumeth.com">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="src\assets\log.png">
@@ -38,7 +53,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#000000">
 
-    <!-- Structured Data -->
+    <!-- AI Software Application Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -46,7 +61,7 @@
         "name": "Lumeth",
         "applicationCategory": "BeautyApplication",
         "operatingSystem": "Android, iOS",
-        "description": "AI-powered beauty services platform connecting users with salons, spas, tattoo parlors, and beauty professionals",
+        "description": "AI-powered beauty platform using advanced machine learning for personalized recommendations and smart scheduling",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -56,11 +71,51 @@
           "@type": "AggregateRating",
           "ratingValue": "4.9",
           "ratingCount": "1000"
+        },
+        "featureList": [
+          "AI-powered beauty recommendations",
+          "Smart appointment scheduling",
+          "Personalized beauty analysis",
+          "Machine learning trend predictions",
+          "Computer vision beauty matching"
+        ],
+        "applicationSubCategory": "Artificial Intelligence",
+        "releaseNotes": "Features advanced AI algorithms for personalized beauty service matching"
+      }
+    </script>
+
+    <!-- AI Service Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Lumeth AI Beauty Platform",
+        "serviceType": "Beauty Services",
+        "description": "AI-powered beauty platform offering personalized recommendations and smart scheduling",
+        "provider": {
+          "@type": "Organization",
+          "name": "Lumeth",
+          "url": "https://lumeth.com"
+        },
+        "areaServed": "Worldwide",
+        "category": "Beauty & Wellness",
+        "additionalType": "http://www.productontology.org/id/Artificial_intelligence",
+        "potentialAction": {
+          "@type": "UseAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://lumeth.com/get-started",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/IOSPlatform",
+              "http://schema.org/AndroidPlatform"
+            ]
+          }
         }
       }
     </script>
 
-    <!-- Organization Schema -->
+    <!-- Organization Schema with AI Focus -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -68,7 +123,7 @@
         "name": "Lumeth",
         "url": "https://lumeth.com",
         "logo": "https://lumeth.com/log.png",
-        "description": "AI-powered platform connecting users with beauty professionals, salons, spas, and tattoo parlors",
+        "description": "AI-powered beauty platform using machine learning and computer vision for personalized beauty services",
         "sameAs": [
           "https://www.facebook.com/people/Lumeth/61560421378410",
           "https://www.instagram.com/lumethapp",
@@ -79,6 +134,17 @@
           "telephone": "+1-555-123-4567",
           "contactType": "customer service",
           "availableLanguage": "English"
+        },
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Computer Vision",
+          "Beauty Services",
+          "Salon Management"
+        ],
+        "memberOf": {
+          "@type": "Organization",
+          "name": "AI Beauty Technology Association"
         }
       }
     </script>

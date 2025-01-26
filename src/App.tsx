@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 import { LoadingScreen } from './components/animations/LoadingScreen';
 import { PageTransition } from './components/animations/PageTransition';
 import { useLoading } from './hooks/useLoading';
@@ -22,11 +23,22 @@ import { Contact } from './pages/Contact';
 import { Business } from './pages/Business';
 import { GetStarted } from './pages/GetStarted';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { SeoHead } from './utils/seo/SeoHead';
 
 function HomePage() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-black text-white">
+        <SeoHead
+          title="Lumeth | AI-Powered Beauty Platform"
+          description="Transform your beauty experience with AI-powered recommendations and instant booking for salons, spas, and beauty services."
+          type="website"
+          appLinks={{
+            ios: "lumeth://home",
+            android: "lumeth://home",
+            web: "https://lumeth.com"
+          }}
+        />
         <Header />
         <main>
           <Hero />
@@ -71,9 +83,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </HelmetProvider>
   );
 }
 
