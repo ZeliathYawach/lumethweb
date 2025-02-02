@@ -1,149 +1,60 @@
-export function generateOrganizationSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://lumeth.com/#organization',
-    name: 'Lumeth',
-    alternateName': 'Lumeth Beauty Platform',
-    url: 'https://lumeth.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://lumeth.com/log.png',
-      width: '512',
-      height: '512'
-    },
-    description: 'AI-powered beauty platform connecting customers with professional beauty services',
-    sameAs: [
-      'https://www.facebook.com/people/Lumeth/61560421378410',
-      'https://www.instagram.com/lumethapp',
-      'https://x.com/Lumeth_official',
-      'https://www.linkedin.com/company/lumeth'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'support@lumeth.com',
-      availableLanguage: ['English']
-    }
-  };
-}
-
-export function generateSoftwareSchema() {
+export function generateVisualAISchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Lumeth',
-    applicationCategory: 'BusinessApplication',
+    name: 'Lumeth Visual AI',
+    applicationCategory: 'LifestyleApplication',
     operatingSystem: ['Android', 'iOS'],
-    description: 'AI-powered beauty services and salon management platform with smart booking and personalized recommendations',
+    description: 'Revolutionary beauty platform using computer vision AI for instant visual analysis without questionnaires',
     offers: {
       '@type': 'Offer',
       price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'Lumeth',
-        url: 'https://lumeth.com'
-      }
+      priceCurrency: 'USD'
     },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      ratingCount: '1000',
-      bestRating: '5',
-      worstRating: '1'
+      ratingCount: '1000'
     },
     featureList: [
-      'AI-powered beauty recommendations',
-      'Smart appointment scheduling',
-      'Real-time availability',
-      'Verified beauty professionals',
-      'Secure payments',
-      'Business analytics'
+      'Instant visual AI analysis',
+      'No questionnaires needed',
+      'Automatic skin type detection',
+      'Child-friendly interface',
+      'Real-time beauty recommendations',
+      'Computer vision technology'
     ],
-    downloadUrl: [
-      'https://apps.apple.com/app/id6737151440',
-      'https://play.google.com/store/apps/details?id=com.Lumeth.Customer'
-    ],
-    screenshot: [
-      'https://lumeth.com/screenshots/booking.jpg',
-      'https://lumeth.com/screenshots/recommendations.jpg'
-    ]
+    applicationSubCategory: 'Computer Vision AI',
+    releaseNotes: 'Features advanced computer vision AI for instant beauty analysis without questions'
   };
 }
 
-export function generateArticleSchema(article: {
-  title: string;
-  description: string;
-  image: string;
-  datePublished: string;
-  dateModified: string;
-  author: string;
-}) {
+export function generateAIServiceSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: article.title,
-    description: article.description,
-    image: article.image,
-    datePublished: article.datePublished,
-    dateModified: article.dateModified,
-    author: {
-      '@type': 'Person',
-      name: article.author
-    },
-    publisher: {
+    '@type': 'Service',
+    name: 'Lumeth Visual AI Beauty Platform',
+    serviceType: 'AI Beauty Analysis',
+    description: 'Revolutionary beauty platform using computer vision AI to analyze looks instantly without questionnaires',
+    provider: {
       '@type': 'Organization',
       name: 'Lumeth',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://lumeth.com/log.png',
-        width: '512',
-        height: '512'
-      }
+      url: 'https://lumeth.com'
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://lumeth.com/blog'
-    }
-  };
-}
-
-export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer
+    areaServed: 'Worldwide',
+    category: 'Beauty & AI Technology',
+    additionalType: 'http://www.productontology.org/id/Computer_vision',
+    potentialAction: {
+      '@type': 'UseAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://lumeth.com/get-started',
+        actionPlatform: [
+          'http://schema.org/DesktopWebPlatform',
+          'http://schema.org/IOSPlatform',
+          'http://schema.org/AndroidPlatform'
+        ]
       }
-    }))
-  };
-}
-
-export function generateLocalBusinessSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BeautySalon',
-    name: 'Lumeth Partner Network',
-    description: 'Network of verified beauty professionals and salons offering AI-powered beauty services',
-    url: 'https://lumeth.com',
-    image: 'https://lumeth.com/salon-network.jpg',
-    priceRange: '$$',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1000',
-      bestRating: '5',
-      worstRating: '1'
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'India'
     }
   };
 }

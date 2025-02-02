@@ -5,7 +5,7 @@ Allow: /
 Sitemap: https://lumeth.com/sitemap.xml
 
 # Crawl-delay
-Crawl-delay: 10
+Crawl-delay: 1
 
 # Disallow paths
 Disallow: /admin/
@@ -20,3 +20,5 @@ Allow: /business/
 Allow: /get-started/
 Allow: /about/
 Allow: /contact/
+Allow: /ai-features/
+Allow: /beauty-solutions/

@@ -1,8 +1,8 @@
 export const SEO_CONFIG = {
   default: {
-    title: 'Lumeth - AI-Powered Beauty Services & Salon Management Platform',
-    description: 'Transform your beauty business with Lumeth\'s AI-powered platform. Smart booking, client management, and business analytics for salons, spas, and independent beauty professionals.',
-    keywords: 'AI beauty platform, salon management software, beauty business platform, appointment booking system',
+    title: 'Lumeth AI - Revolutionary Visual AI Beauty Analysis Platform',
+    description: 'Experience the only beauty platform that uses advanced computer vision AI to analyze your looks automatically - no questions asked. Unlike other platforms that rely on questionnaires, Lumeth\'s AI sees and understands your unique features instantly.',
+    keywords: 'visual AI beauty analysis, automatic skin analysis, AI beauty recommendations, no questionnaire beauty AI, instant beauty analysis, computer vision beauty, smart beauty recommendations',
     appLinks: {
       ios: 'lumeth://home',
       android: 'lumeth://home',
@@ -11,19 +11,19 @@ export const SEO_CONFIG = {
   },
   pages: {
     home: {
-      title: 'AI-Powered Beauty Services & Salon Management | Lumeth',
-      description: 'Revolutionary beauty platform with AI-powered booking, business management, and client engagement tools for salons and beauty professionals.',
-      keywords: 'beauty booking app, AI beauty recommendations, salon software'
+      title: 'Lumeth AI | Instant Visual Beauty Analysis Without Questions',
+      description: 'The only beauty platform that instantly analyzes your looks using advanced AI - no questions needed. Our computer vision AI understands your unique features automatically, making beauty recommendations accessible even for kids.',
+      keywords: 'instant beauty analysis, visual AI beauty, automatic skin analysis, no questions beauty AI, child-friendly beauty app, AI beauty recommendations'
     },
-    business: {
-      title: 'Salon & Spa Management Software | Lumeth Business Solutions',
-      description: 'Streamline your beauty business operations with our AI-powered management platform. Perfect for salons, spas, and independent professionals.',
-      keywords: 'salon management software, spa booking system, beauty business platform'
+    aiFeatures: {
+      title: 'Visual AI Beauty Analysis | Zero Questions Asked | Lumeth AI',
+      description: 'Unlike other platforms that rely on questionnaires, Lumeth uses advanced computer vision AI to analyze your features instantly. Perfect for everyone, including those who don\'t know their skin type.',
+      keywords: 'visual beauty AI, automatic skin analysis, no questionnaire needed, instant beauty recommendations, AI skin analysis'
     },
-    admin: {
-      title: 'Content Management Dashboard | Lumeth Admin',
-      description: 'Secure admin dashboard for managing blog content, user accounts, and platform settings.',
-      keywords: 'admin dashboard, content management, blog management'
+    beautySolutions: {
+      title: 'Instant AI Beauty Analysis | No Skin Knowledge Required | Lumeth',
+      description: 'Don\'t know your skin type? No problem! Our AI sees and understands your unique features automatically. Get instant, personalized beauty recommendations without answering any questions.',
+      keywords: 'automatic beauty analysis, visual AI recommendations, no skin knowledge needed, instant skin analysis, AI beauty technology'
     }
   }
 } as const;
