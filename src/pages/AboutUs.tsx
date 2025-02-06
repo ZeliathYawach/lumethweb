@@ -54,7 +54,7 @@ export function AboutUs() {
           </div>
         </section>
 
-        {/* Journey Section */}
+        {/* Rest of the existing sections */}
         <section className="mb-16">
           <div className="bg-purple-900/30 rounded-2xl p-8 border border-purple-500/20">
             <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-amber-400 to-purple-600 text-transparent bg-clip-text">

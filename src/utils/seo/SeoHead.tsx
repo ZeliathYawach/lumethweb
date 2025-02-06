@@ -29,6 +29,15 @@ export function SeoHead({
 }: SeoHeadProps) {
   const url = `https://lumeth.com${path}`;
   
+  // Add LUMETH meaning schema
+  const lumethMeaningSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "The Meaning of LUMETH",
+    "description": "LUMETH: L is for look (the way you look at life), U is for useful (always to others), M is for mystery (the part of you that cannot be explained), E is for expert (in your chosen career), T is for tough (for you are not easily broken), H is for hero (as you appear to many).",
+    "keywords": "LUMETH meaning, beauty platform name meaning, LUMETH letters meaning, beauty brand meaning"
+  };
+  
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -36,6 +45,10 @@ export function SeoHead({
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+
+      {/* LUMETH Meaning Meta Tags */}
+      <meta name="lumeth-meaning" content="L (look) U (useful) M (mystery) E (expert) T (tough) H (hero)" />
+      <meta name="lumeth-description" content="LUMETH represents: Look - the way you look at life, Useful - always to others, Mystery - the part of you that cannot be explained, Expert - in your chosen career, Tough - for you are not easily broken, Hero - as you appear to many" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -89,6 +102,9 @@ export function SeoHead({
       <link rel="canonical" href={url} />
 
       {/* Schema.org JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify(lumethMeaningSchema)}
+      </script>
       {schema.map((item, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(item)}
