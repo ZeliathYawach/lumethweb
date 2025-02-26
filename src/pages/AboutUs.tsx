@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageLayout } from '../components/layouts/PageLayout';
-import { Crown, Star, Shield, Users, Sparkles, Gift, Brain } from 'lucide-react';
+import { Crown, Star, Shield, Users, Sparkles, Gift, Brain, Wand2, Shirt, MessageSquare } from 'lucide-react';
 
 export function AboutUs() {
   return (
@@ -15,8 +15,40 @@ export function AboutUs() {
             Welcome to LUMETH
           </h1>
           <p className="text-gray-300 text-xl max-w-2xl mx-auto">
-            Your premier destination for hassle-free beauty services and products. We connect you with trusted beauty service providers and offer curated beauty products—all in one convenient place.
+            Your premier destination for AI-powered beauty services and personalized wellness solutions. We connect you with trusted beauty service providers and offer cutting-edge AI technology for your beauty journey.
           </p>
+        </section>
+
+        {/* What is Lumeth Section */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-amber-400/10 to-purple-600/10 rounded-2xl p-8 border border-amber-400/20">
+            <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-amber-400 to-purple-600 text-transparent bg-clip-text">
+              What is Lumeth?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Lumeth is a revolutionary AI-powered beauty platform that combines cutting-edge artificial intelligence with beauty expertise to provide personalized recommendations, virtual try-on experiences, and beauty service bookings—all in one seamless application.
+            </p>
+            <p className="text-gray-300 mb-6">
+              Our mission is to transform how people approach beauty and wellness by making expert advice and personalized recommendations accessible to everyone through the power of AI.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20 flex flex-col items-center text-center">
+                <Brain className="w-10 h-10 text-amber-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">AI-Powered</h3>
+                <p className="text-sm text-gray-300">Advanced machine learning algorithms that understand your unique beauty needs</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20 flex flex-col items-center text-center">
+                <Users className="w-10 h-10 text-amber-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Personalized</h3>
+                <p className="text-sm text-gray-300">Tailored recommendations based on your individual features and preferences</p>
+              </div>
+              <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20 flex flex-col items-center text-center">
+                <Shield className="w-10 h-10 text-amber-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Trusted</h3>
+                <p className="text-sm text-gray-300">Verified beauty professionals and science-backed recommendations</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* LUMETH Meaning Section */}
@@ -54,7 +86,7 @@ export function AboutUs() {
           </div>
         </section>
 
-        {/* Rest of the existing sections */}
+        {/* Our Journey */}
         <section className="mb-16">
           <div className="bg-purple-900/30 rounded-2xl p-8 border border-purple-500/20">
             <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-amber-400 to-purple-600 text-transparent bg-clip-text">
@@ -66,32 +98,77 @@ export function AboutUs() {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Our AI-Powered Services */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-amber-400 to-purple-600 text-transparent bg-clip-text">
-            What We Offer
+            Our AI-Powered Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-purple-900/30 rounded-xl p-6 border border-purple-500/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Beauty Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-purple-900/30 p-8 rounded-xl border border-purple-500/20">
+              <div className="flex items-center mb-4">
+                <MessageSquare className="w-8 h-8 text-amber-400 mr-4" />
+                <h3 className="text-xl font-semibold text-white">LUMIA AI</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Your personal AI beauty consultant providing expert guidance on:
+              </p>
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                <li>Top-notch barber shops</li>
-                <li>Luxurious salons</li>
-                <li>Cutting-edge derma clinics</li>
-                <li>Creative tattoo parlours</li>
-                <li>Relaxing spas</li>
-                <li>Rejuvenating massage centres</li>
+                <li>Personalized skincare advice and routines</li>
+                <li>Custom diet planning for beauty from within</li>
+                <li>AI-powered calorie counting</li>
+                <li>Product recommendations and reviews</li>
+                <li>Mental wellness support</li>
               </ul>
             </div>
-            <div className="bg-purple-900/30 rounded-xl p-6 border border-purple-500/20">
-              <img
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80"
-                alt="Beauty Services"
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <p className="text-gray-300">
-                Each service provider is carefully vetted and verified to ensure excellence and professionalism.
+            
+            <div className="bg-purple-900/30 p-8 rounded-xl border border-purple-500/20">
+              <div className="flex items-center mb-4">
+                <Wand2 className="w-8 h-8 text-amber-400 mr-4" />
+                <h3 className="text-xl font-semibold text-white">STYLL AI</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Revolutionary virtual try-on technology:
               </p>
+              <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <li>Upload clothing images or photos of others wearing items</li>
+                <li>Upload your own photo</li>
+                <li>See yourself virtually wearing the clothing</li>
+                <li>Realistic visualization before purchasing</li>
+                <li>Try different styles and colors instantly</li>
+              </ul>
+            </div>
+            
+            <div className="bg-purple-900/30 p-8 rounded-xl border border-purple-500/20">
+              <div className="flex items-center mb-4">
+                <Sparkles className="w-8 h-8 text-amber-400 mr-4" />
+                <h3 className="text-xl font-semibold text-white">FACE ENHANCE</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Advanced image enhancement technology:
+              </p>
+              <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <li>Process your photos to present your best look</li>
+                <li>Highlight your natural beauty</li>
+                <li>Subtle enhancements that maintain authenticity</li>
+                <li>Perfect for social media and professional profiles</li>
+              </ul>
+            </div>
+            
+            <div className="bg-purple-900/30 p-8 rounded-xl border border-purple-500/20">
+              <div className="flex items-center mb-4">
+                <Scissors className="w-8 h-8 text-amber-400 mr-4" />
+                <h3 className="text-xl font-semibold text-white">Beauty Services</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Connect with top beauty professionals:
+              </p>
+              <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <li>AI-matched salon and spa recommendations</li>
+                <li>Seamless booking system</li>
+                <li>Verified service providers</li>
+                <li>Personalized service suggestions</li>
+                <li>Real-time availability</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -128,9 +205,9 @@ export function AboutUs() {
               <p className="text-gray-300">Experience cutting-edge AI technology enhancing your beauty journey.</p>
             </div>
             <div className="bg-purple-900/30 p-6 rounded-xl border border-purple-500/20">
-              <Sparkles className="h-8 w-8 text-amber-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Beauty Marketplace</h3>
-              <p className="text-gray-300">Coming soon: Shop curated beauty products from top brands.</p>
+              <Shirt className="h-8 w-8 text-amber-400 mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Virtual Try-On</h3>
+              <p className="text-gray-300">See how clothing and hairstyles look on you before making decisions.</p>
             </div>
           </div>
         </section>
@@ -142,7 +219,7 @@ export function AboutUs() {
               Our Commitment
             </h2>
             <p className="text-gray-300">
-              At LUMETH, we believe that everyone deserves to feel beautiful and confident. We're dedicated to providing a safe, reliable, and inclusive platform where beauty enthusiasts can explore, connect, and indulge in the best that the beauty industry has to offer.
+              At LUMETH, we believe that everyone deserves to feel beautiful and confident. We're dedicated to providing a safe, reliable, and inclusive platform where beauty enthusiasts can explore, connect, and indulge in the best that the beauty industry has to offer. Our AI technology is designed to enhance your natural beauty and provide personalized recommendations that truly work for you.
             </p>
           </div>
         </section>
@@ -174,7 +251,7 @@ export function AboutUs() {
             Get Started
           </h2>
           <p className="text-gray-300 mb-8">
-            Join the LUMETH community today and embark on a journey to discover your perfect beauty experience. Whether you're looking for a quick trim, a relaxing spa day, or a complete makeover, LUMETH is here to make your beauty dreams a reality.
+            Join the LUMETH community today and embark on a journey to discover your perfect beauty experience. Whether you're looking for personalized AI recommendations, virtual try-on experiences, or connecting with beauty professionals, LUMETH is here to make your beauty dreams a reality.
           </p>
         </section>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Shield, Users, Clock, Star, Smartphone } from 'lucide-react';
+import { Calendar, Shield, Users, Clock, Star, Smartphone, ShoppingBag, Sparkles, Scissors } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FeatureCard } from './ui/FeatureCard';
 import { FeatureBackground } from './ui/FeatureBackground';
@@ -35,6 +35,21 @@ export function AppFeatures() {
       icon: Smartphone,
       title: "Mobile First",
       description: "Manage your appointments and beauty journey on the go"
+    },
+    {
+      icon: ShoppingBag,
+      title: "Product Recommendations",
+      description: "Discover beauty products perfectly matched to your needs"
+    },
+    {
+      icon: Sparkles,
+      title: "Virtual Try-On",
+      description: "Try clothing and hairstyles virtually before making decisions"
+    },
+    {
+      icon: Scissors,
+      title: "Beauty Service Directory",
+      description: "Find and book the perfect salon or spa for your needs"
     }
   ];
 
@@ -54,7 +69,7 @@ export function AppFeatures() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
