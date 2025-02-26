@@ -1,13 +1,19 @@
 import React from 'react';
 import { MessageSquare, Wand2, Sparkles, Brain, Utensils, Calculator, Star, Scissors, Shirt, HeartPulse, Smile } from 'lucide-react';
-import { SplineBackground } from './ui/SplineBackground';
 
 export function AiTechnology() {
   return (
     <section id="aibeauty" className="relative min-h-screen py-24 overflow-hidden">
-      <SplineBackground 
-        url="https://prod.spline.design/Pqv2Bt1ZkUUQxlKn/scene.splinecode"
-      />
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80"
+          alt="AI Beauty Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-purple-900/70 to-black/90" />
+      </div>
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
