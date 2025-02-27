@@ -1,0 +1,18 @@
+# Redirect all requests to index.html for SPA routing
+/* /index.html 200
+
+# Redirect www to non-www
+https://www.lumeth.com/* https://lumeth.com/:splat 301!
+
+# Redirect HTTP to HTTPS
+http://lumeth.com/* https://lumeth.com/:splat 301!
+http://www.lumeth.com/* https://lumeth.com/:splat 301!
+
+# Handle legacy routes (if any)
+/app/* /get-started 301
+/download /get-started 301
+/salon/* /business 301
+/professional/* /business 301
+
+# API fallback (if needed)
+/api/* https://api.lumeth.com/:splat 200
