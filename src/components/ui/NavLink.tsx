@@ -7,6 +7,7 @@ interface NavLinkProps {
   children: React.ReactNode;
   className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onClick?: () => void;
 }
 
@@ -16,15 +17,23 @@ export function NavLink({ to, children, className = '', onClick }: NavLinkProps)
 
 export function NavLink({ to, children, className = '' }: NavLinkProps) {
 >>>>>>> 1472b9f (Initial commit)
+=======
+}
+
+export function NavLink({ to, children, className = '' }: NavLinkProps) {
+>>>>>>> 727b76e (Your commit message)
   const scrollToSection = useScrollToSection();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     scrollToSection(to);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (onClick) onClick();
 =======
 >>>>>>> 1472b9f (Initial commit)
+=======
+>>>>>>> 727b76e (Your commit message)
   };
 
   return (

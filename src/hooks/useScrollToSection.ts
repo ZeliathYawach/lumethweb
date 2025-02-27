@@ -18,6 +18,7 @@ export function useScrollToSection() {
 
   const scrollToSection = (path: string) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Check if the path contains an ID (for scrolling to a section)
     const isIdPath = path.startsWith('/') && !path.includes('/', 1);
     const id = isIdPath ? path.substring(1) : '';
@@ -32,6 +33,8 @@ export function useScrollToSection() {
       // It's a different page
       navigate(path);
 =======
+=======
+>>>>>>> 727b76e (Your commit message)
     const [basePath, hash] = path.split('#');
     
     if (location.pathname !== basePath && basePath !== '') {
@@ -41,7 +44,10 @@ export function useScrollToSection() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+<<<<<<< HEAD
 >>>>>>> 1472b9f (Initial commit)
+=======
+>>>>>>> 727b76e (Your commit message)
     }
   };
 
