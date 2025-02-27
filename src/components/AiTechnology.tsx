@@ -1,4 +1,5 @@
 import React from 'react';
+import bgImage from "./bg.jpg";
 import { MessageSquare, Wand2, Sparkles, Brain, Utensils, Calculator, Star, Scissors, Shirt, HeartPulse, Smile } from 'lucide-react';
 
 export function AiTechnology() {
@@ -7,7 +8,7 @@ export function AiTechnology() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80"
+          src={bgImage}
           alt="AI Beauty Background"
           className="w-full h-full object-cover"
         />
@@ -79,20 +80,6 @@ export function AiTechnology() {
                   <p className="text-sm text-gray-400">Track your nutrition with AI precision</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <Star className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium text-white">Product Reviews</h4>
-                  <p className="text-sm text-gray-400">AI-analyzed beauty product recommendations</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-2">
-                <Scissors className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium text-white">Hair Styling</h4>
-                  <p className="text-sm text-gray-400">Virtual hairstyle and color suggestions</p>
-                </div>
-              </div>
             </div>
           </div>
           
@@ -114,20 +101,6 @@ export function AiTechnology() {
                 <div>
                   <h4 className="font-medium text-white">Exercise Plans</h4>
                   <p className="text-sm text-gray-400">Custom fitness routines for your goals</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-2">
-                <Brain className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium text-white">Mental Wellness</h4>
-                  <p className="text-sm text-gray-400">AI therapy and mental health support</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-2">
-                <MessageSquare className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium text-white">Beauty Reasoning</h4>
-                  <p className="text-sm text-gray-400">Understand the science behind recommendations</p>
                 </div>
               </div>
             </div>
