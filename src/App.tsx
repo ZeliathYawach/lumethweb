@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
@@ -24,6 +24,27 @@ import { Business } from './pages/Business';
 import { GetStarted } from './pages/GetStarted';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { SeoHead } from './utils/seo/SeoHead';
+
+function ScrollToSection() {
+  const { pathname, hash } = useLocation();
+  
+  useEffect(() => {
+    // If there's a hash in the URL, scroll to that element
+    if (hash) {
+      const id = hash.substring(1); // Remove the # from the hash
+      const element = document.getElementById(id);
+      if (element) {
+        // Simple smooth scroll without animation
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (pathname === '/') {
+      // If on home page with no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+  
+  return null;
+}
 
 function HomePage() {
   return (
@@ -63,12 +84,9 @@ function AppContent() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <ScrollToSection />
+      <Routes location={location} key={location.pathname + location.search + location.hash}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/features" element={<HomePage />} />
-        <Route path="/ourapps" element={<HomePage />} />
-        <Route path="/aibeauty" element={<HomePage />} />
-        <Route path="/testimonials" element={<HomePage />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />

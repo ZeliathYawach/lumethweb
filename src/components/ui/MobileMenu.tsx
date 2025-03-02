@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { NavLink } from './NavLink';
 import { navigationItems } from '../navigation/NavigationItems';
 
@@ -10,6 +10,8 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const location = useLocation();
+  
   return (
     <AnimatePresence>
       {isOpen && (
