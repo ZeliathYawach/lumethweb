@@ -1,19 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useScrollToSection } from '../../hooks/useScrollToSection';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface NavLinkProps {
   to: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
-export function NavLink({ to, children, className = '' }: NavLinkProps) {
-  const scrollToSection = useScrollToSection();
+export function NavLink({ to, children, className = '', onClick }: NavLinkProps) {
+  const navigate = useNavigate();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    scrollToSection(to);
+    navigate(to);
+    
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (

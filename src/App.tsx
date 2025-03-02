@@ -53,6 +53,82 @@ function HomePage() {
   );
 }
 
+function FeaturesPage() {
+  return (
+    <PageTransition>
+      <div className="min-h-screen bg-black text-white">
+        <SeoHead
+          title="Features | Lumeth"
+          description="Explore the revolutionary features of Lumeth's AI-powered beauty platform."
+          type="website"
+        />
+        <Header />
+        <main>
+          <AppFeatures />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+}
+
+function OurAppsPage() {
+  return (
+    <PageTransition>
+      <div className="min-h-screen bg-black text-white">
+        <SeoHead
+          title="Our Apps | Lumeth"
+          description="Discover Lumeth's suite of powerful apps for customers, businesses, and beauty professionals."
+          type="website"
+        />
+        <Header />
+        <main>
+          <AppShowcase />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+}
+
+function AIBeautyPage() {
+  return (
+    <PageTransition>
+      <div className="min-h-screen bg-black text-white">
+        <SeoHead
+          title="AI Beauty Technology | Lumeth"
+          description="Learn about Lumeth's advanced AI beauty technology and how it transforms your beauty experience."
+          type="website"
+        />
+        <Header />
+        <main>
+          <AiTechnology />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+}
+
+function TestimonialsPage() {
+  return (
+    <PageTransition>
+      <div className="min-h-screen bg-black text-white">
+        <SeoHead
+          title="Testimonials | Lumeth"
+          description="See what our users say about their experience with Lumeth's AI-powered beauty platform."
+          type="website"
+        />
+        <Header />
+        <main>
+          <Testimonials />
+        </main>
+        <Footer />
+      </div>
+    </PageTransition>
+  );
+}
+
 function AppContent() {
   const location = useLocation();
   const isLoading = useLoading();
@@ -65,6 +141,10 @@ function AppContent() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/ourapps" element={<OurAppsPage />} />
+        <Route path="/aibeauty" element={<AIBeautyPage />} />
+        <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
