@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
-import { LoadingScreen } from './components/animations/LoadingScreen';
 import { PageTransition } from './components/animations/PageTransition';
-import { useLoading } from './hooks/useLoading';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AppFeatures } from './components/AppFeatures';
@@ -63,7 +61,7 @@ function HomePage() {
   );
 }
 
-// Component to handle section scrolling
+// Component to handle section scrolling with smooth behavior
 function SectionScrollHandler() {
   const { pathname } = useLocation();
   
@@ -83,11 +81,12 @@ function SectionScrollHandler() {
       // Find the section element
       const sectionElement = document.getElementById(sectionId);
       
-      // If found, scroll to it
+      // If found, scroll to it smoothly
       if (sectionElement) {
-        setTimeout(() => {
-          sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+        sectionElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
       }
     }
   }, [pathname]);
@@ -97,35 +96,32 @@ function SectionScrollHandler() {
 
 function AppContent() {
   const location = useLocation();
-  const isLoading = useLoading();
-
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
 
   return (
-    <AnimatePresence mode="wait">
+    <>
       <ScrollToTop />
       <SectionScrollHandler />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/features" element={<HomePage />} />
-        <Route path="/ourapps" element={<HomePage />} />
-        <Route path="/aibeauty" element={<HomePage />} />
-        <Route path="/testimonials" element={<HomePage />} />
-        <Route path="/get-started" element={<GetStarted />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
-        <Route path="/blog/create" element={<CreateBlog />} />
-        <Route path="/admin/blog" element={<AdminDashboard />} />
-        <Route path="/terms" element={<TermsAndConditions />} />
-        <Route path="/cancellation-policy" element={<CancellationPolicy />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/business" element={<Business />} />
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/features" element={<HomePage />} />
+          <Route path="/ourapps" element={<HomePage />} />
+          <Route path="/aibeauty" element={<HomePage />} />
+          <Route path="/testimonials" element={<HomePage />} />
+          <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/blog/create" element={<CreateBlog />} />
+          <Route path="/admin/blog" element={<AdminDashboard />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/business" element={<Business />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 
