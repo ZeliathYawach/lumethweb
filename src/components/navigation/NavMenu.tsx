@@ -13,19 +13,20 @@ export function NavMenu({ className = '' }: NavMenuProps) {
       <ul className="flex items-center space-x-6 lg:space-x-8">
         {navigationItems.map(({ id, label, path }) => (
           <li key={id}>
-            <NavLink to={path}>
-              {label}
-            </NavLink>
+            <Link
+              to={path}
+              className="relative group text-gray-200 hover:text-amber-400 transition-colors duration-300"
+            >
+              <span className="relative z-10">{label}</span>
+              <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-amber-400 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            </Link>
           </li>
         ))}
         
         <li>
-          <Link
-            to="/get-started"
-            className="bg-gradient-to-r from-amber-400 to-purple-600 text-white px-4 sm:px-6 py-2 rounded-full hover:opacity-90 transition-opacity text-sm sm:text-base"
-          >
+          <NavLink to="/get-started">
             Get Started
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

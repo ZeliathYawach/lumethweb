@@ -26,13 +26,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <ul className="space-y-4">
                 {navigationItems.map(({ id, label, path }) => (
                   <li key={id}>
-                    <NavLink
+                    <Link
                       to={path}
                       onClick={onClose}
-                      className="block px-4 py-2 text-lg"
+                      className="block px-4 py-2 text-lg text-gray-200 hover:text-amber-400 transition-colors"
                     >
                       {label}
-                    </NavLink>
+                    </Link>
                   </li>
                 ))}
                 

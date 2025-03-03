@@ -53,14 +53,46 @@ function HomePage() {
         <main>
           <Hero />
           <AppFeatures />
-          <AiTechnology />
           <AppShowcase />
+          <AiTechnology />
           <Testimonials />
         </main>
         <Footer />
       </div>
     </PageTransition>
   );
+}
+
+// Component to handle section scrolling
+function SectionScrollHandler() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    // Map routes to section IDs
+    const routeToSectionMap: Record<string, string> = {
+      '/features': 'features',
+      '/ourapps': 'ourapps',
+      '/aibeauty': 'aibeauty',
+      '/testimonials': 'testimonials'
+    };
+    
+    // Get the section ID for the current route
+    const sectionId = routeToSectionMap[pathname];
+    
+    if (sectionId) {
+      // Find the section element
+      const sectionElement = document.getElementById(sectionId);
+      
+      // If found, scroll to it
+      if (sectionElement) {
+        setTimeout(() => {
+          sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [pathname]);
+  
+  return null;
 }
 
 function AppContent() {
@@ -74,12 +106,13 @@ function AppContent() {
   return (
     <AnimatePresence mode="wait">
       <ScrollToTop />
+      <SectionScrollHandler />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/features" element={<AppFeatures />} />
-        <Route path="/ourapps" element={<AppShowcase />} />
-        <Route path="/aibeauty" element={<AiTechnology />} />
-        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/features" element={<HomePage />} />
+        <Route path="/ourapps" element={<HomePage />} />
+        <Route path="/aibeauty" element={<HomePage />} />
+        <Route path="/testimonials" element={<HomePage />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
