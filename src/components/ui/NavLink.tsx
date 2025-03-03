@@ -14,26 +14,8 @@ export function NavLink({ to, children, className = '', onClick }: NavLinkProps)
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     
-    // Check if the link is to a section on the home page
-    if (to.startsWith('/#')) {
-      const sectionId = to.substring(2); // Remove the /# prefix
-      const element = document.getElementById(sectionId);
-      
-      // If we're already on the home page, just scroll to the section
-      if (window.location.pathname === '/') {
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-          // Update URL without full navigation
-          window.history.pushState(null, '', to);
-        }
-      } else {
-        // If we're on another page, navigate to home with the hash
-        navigate(to);
-      }
-    } else {
-      // For other links, just navigate normally
-      navigate(to);
-    }
+    // Navigate to the route
+    navigate(to);
     
     if (onClick) {
       onClick();

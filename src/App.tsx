@@ -25,23 +25,12 @@ import { GetStarted } from './pages/GetStarted';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { SeoHead } from './utils/seo/SeoHead';
 
-function ScrollToSection() {
-  const { pathname, hash } = useLocation();
+function ScrollToTop() {
+  const { pathname } = useLocation();
   
   useEffect(() => {
-    // If there's a hash in the URL, scroll to that element
-    if (hash) {
-      const id = hash.substring(1); // Remove the # from the hash
-      const element = document.getElementById(id);
-      if (element) {
-        // Simple smooth scroll without animation
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else if (pathname === '/') {
-      // If on home page with no hash, scroll to top
-      window.scrollTo(0, 0);
-    }
-  }, [pathname, hash]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
   
   return null;
 }
@@ -84,9 +73,13 @@ function AppContent() {
 
   return (
     <AnimatePresence mode="wait">
-      <ScrollToSection />
-      <Routes location={location} key={location.pathname + location.search + location.hash}>
+      <ScrollToTop />
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/features" element={<AppFeatures />} />
+        <Route path="/ourapps" element={<AppShowcase />} />
+        <Route path="/aibeauty" element={<AiTechnology />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
